@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A test page displaying clean and perturbed brand logos for assessing anti-phishing tools.">
     <title>Perturbed Logos Anti-Phishing Test</title>
     <style>
         body {
@@ -29,11 +30,13 @@
         .logo-section {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
             margin: 40px 0;
         }
 
         .logo {
             text-align: center;
+            margin: 20px;
         }
 
         .logo img {
@@ -42,11 +45,23 @@
             border: 1px solid #ccc;
             padding: 10px;
             background-color: #fafafa;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
         }
 
         .logo p {
             margin-top: 10px;
             font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .logo-section {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -58,38 +73,37 @@
         <!-- Clean Logos Section -->
         <h2>Clean Logos</h2>
         <div class="logo-section">
-            <div class="logo">
-                <img src="images/facebook_clean.png" alt="Clean Facebook Logo">
-                <p>Facebook</p>
-            </div>
-            <div class="logo">
-                <img src="images/instagram_clean.png" alt="Clean Instagram Logo">
-                <p>Instagram</p>
-            </div>
-            <div class="logo">
-                <img src="images/boa_clean.png" alt="Clean Bank of America Logo">
-                <p>Bank of America</p>
-            </div>
+            <figure class="logo">
+                <img src="images/facebook_clean.png" alt="Clean version of the Facebook logo for phishing test">
+                <figcaption>Facebook (Clean)</figcaption>
+            </figure>
+            <figure class="logo">
+                <img src="images/instagram_clean.png" alt="Clean version of the Instagram logo for phishing test">
+                <figcaption>Instagram (Clean)</figcaption>
+            </figure>
+            <figure class="logo">
+                <img src="images/boa_clean.png" alt="Clean version of the Bank of America logo for phishing test">
+                <figcaption>Bank of America (Clean)</figcaption>
+            </figure>
         </div>
 
         <!-- Perturbed Logos Section -->
         <h2>Perturbed Logos</h2>
         <div class="logo-section">
-            <div class="logo">
-                <img src="images/facebook_perturbed.png" alt="Perturbed Facebook Logo">
-                <p>Facebook</p>
-            </div>
-            <div class="logo">
-                <img src="images/instagram_perturbed.png" alt="Perturbed Instagram Logo">
-                <p>Instagram</p>
-            </div>
-            <div class="logo">
-                <img src="images/boa_perturbed.png" alt="Perturbed Bank of America Logo">
-                <p>Bank of America</p>
-            </div>
+            <figure class="logo">
+                <img src="images/facebook_perturbed.png" alt="Perturbed version of the Facebook logo for phishing test">
+                <figcaption>Facebook (Perturbed)</figcaption>
+            </figure>
+            <figure class="logo">
+                <img src="images/instagram_perturbed.png" alt="Perturbed version of the Instagram logo for phishing test">
+                <figcaption>Instagram (Perturbed)</figcaption>
+            </figure>
+            <figure class="logo">
+                <img src="images/boa_perturbed.png" alt="Perturbed version of the Bank of America logo for phishing test">
+                <figcaption>Bank of America (Perturbed)</figcaption>
+            </figure>
         </div>
     </div>
 
 </body>
 </html>
-
