@@ -117,7 +117,6 @@
         <div class="logo-container">
             <img src="images/logo.jpg" alt="FR^2 Team Logo" id="website-logo">
         </div>
-
     </header>
 
     <main>
@@ -177,36 +176,32 @@
     </footer>
 
     <script>
-        // JavaScript to handle the trust survey form submission and log responses
-        document.addEventListener("DOMContentLoaded", function() {
-            const form = document.getElementById("logo-trust-survey-form");
+    // JavaScript to handle the trust survey form submission and log responses
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById("logo-trust-survey-form");
 
-            form.addEventListener("submit", function(event) {
-                event.preventDefault(); // Prevent form submission
-
-                const logoTrustElements = document.querySelectorAll('.trust-select');
-                logoTrustElements.forEach((element, index) => {
-                    console.log(`Trust response for Logo ${index + 1}:`, element.value);
-                });
-
-                const overallTrustValue = document.getElementById("overall-trust").value;
-                const reasonValue = document.getElementById("reason").value;
-                const improvementValue = document.getElementById("improvement").value;
-
-                console.log("Overall Trust response: ", overallTrustValue);
-                if (overallTrustValue === "no") {
-                    console.log("Reason for distrust: ", reasonValue);
-                }
-                console.log("Suggested improvements: ", improvementValue);
-
-                // Provide feedback to the user
-                alert("Thank you for your response!");
-
-                // Clear the form
-                form.reset();
+        form.addEventListener("submit", function(event) {
+            // Log responses before form submission
+            const logoTrustElements = document.querySelectorAll('.trust-select');
+            logoTrustElements.forEach((element, index) => {
+                console.log(`Trust response for Logo ${index + 1}:`, element.value);
             });
+
+            const overallTrustValue = document.getElementById("overall-trust").value;
+            const reasonValue = document.getElementById("reason").value;
+            const improvementValue = document.getElementById("improvement").value;
+
+            console.log("Overall Trust response: ", overallTrustValue);
+            if (overallTrustValue === "no") {
+                console.log("Reason for distrust: ", reasonValue);
+            }
+            console.log("Suggested improvements: ", improvementValue);
+
+            // The form will now be submitted to Formspree
         });
-    </script>
+    });
+</script>
+
 </body>
 </html>
 
