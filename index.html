@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Trust Test</title>
+    <title>FR^2 Trust Test Website</title>
     <style>
         /* CSS to enhance the appearance of the fake websites with different noise levels in logos */
 
@@ -107,26 +107,17 @@
             padding: 10px 0;
             background-color: #333;
             color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            position: relative;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <!-- Placeholder for logos with different noise levels -->
-            <img src="images/logo.png" alt="Website Logo" id="website-logo">
+            <img src="images/logo.jpg" alt="FR^2 Team Logo" id="website-logo">
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+
     </header>
 
     <main>
@@ -135,7 +126,7 @@
             <p>Please evaluate each logo shown below and let us know your thoughts on its trustworthiness.</p>
         </section>
 
-        <section class="logo-survey">
+        <form id="logo-trust-survey-form" action="https://formspree.io/f/mnnqpwel" method="POST">
             <div class="logo-grid">
                 <div class="logo-item">
                     <img src="logo_noise_level_1.png" alt="Logo 1">
@@ -164,26 +155,25 @@
                 <!-- Add more logos as needed -->
             </div>
 
-            <form id="logo-trust-survey-form" action="https://formspree.io/f/mnnqpwel" method="POST">
-                <h2>Trust Survey Summary</h2>
-                <label for="overall-trust">Overall, do you trust this website?</label>
-                <select id="overall-trust" name="overall_trust">
-                    <option value="yes">Yes</option>
-                    <option value="no">No</option>
-                </select>
-                <br>
-                <label for="reason">If no, please explain why:</label>
-                <textarea id="reason" name="reason" rows="4"></textarea>
-                <br>
-                <label for="improvement">How could we improve the trustworthiness of our website?</label>
-                <textarea id="improvement" name="improvement" rows="4"></textarea>
-                <br>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
+            <h2>Trust Survey Summary</h2>
+            <label for="overall-trust">Overall, do you trust this website?</label>
+            <select id="overall-trust" name="overall_trust">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <br>
+            <label for="reason">If no, please explain why:</label>
+            <textarea id="reason" name="reason" rows="4"></textarea>
+            <br>
+            <label for="improvement">How could we improve the trustworthiness of our website?</label>
+            <textarea id="improvement" name="improvement" rows="4"></textarea>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
     </main>
 
-    &copy; 2024 University of Tennessee Computer Science Department COSC 569 FR^2 Team. All rights reserved.
+    <footer>
+        <p>&copy; University of Tennessee Computer Science Department, 2024 COSC 569 FR^2 Team. All rights reserved.</p>
     </footer>
 
     <script>
