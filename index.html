@@ -5,204 +5,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FR^2 Trust Test Website</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A test page displaying clean and perturbed brand logos for human perception testing.">
+    <title>Perturbed Logos Perception Test</title>
     <style>
-        /* CSS to enhance the appearance of the fake websites with different noise levels in logos */
-
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             background-color: #f4f4f4;
             margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .logo-container {
-            margin-bottom: 15px;
-        }
-
-        .logo-container img {
-            height: 60px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        main {
             padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             background-color: #fff;
-            max-width: 1000px;
-            margin: 20px auto;
-            border-radius: 8px;
+            padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .logo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-
-        .logo-item {
+        h1 {
             text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #333;
         }
 
-        .logo-item img {
-            max-width: 100%;
+        .logo-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .logo {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .logo img {
+            width: 200px;
             height: auto;
-            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fafafa;
+            transition: transform 0.3s ease;
         }
 
-        select, textarea {
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .logo p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], select {
             width: 100%;
             padding: 10px;
-            border-radius: 5px;
+            margin: 10px 0;
             border: 1px solid #ccc;
+            border-radius: 4px;
         }
 
-        button {
-            margin-top: 15px;
-            padding: 10px 15px;
+        input[type="submit"] {
             background-color: #333;
-            color: #fff;
+            color: white;
+            padding: 15px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
 
-        button:hover {
+        input[type="submit"]:hover {
             background-color: #555;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #333;
-            color: #fff;
-            position: relative;
-            margin-top: 20px;
+        @media (max-width: 768px) {
+            .logo-section {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="images/logo.jpg" alt="FR^2 Team Logo" id="website-logo">
+    <div class="container">
+        <h1>Perturbed Logos Perception Test</h1>
+
+        <!-- Clean Logos Section -->
+        <h2>Clean Logos</h2>
+        <div class="logo-section">
+            <figure class="logo">
+                <img src="./Control Group (Images)/CLEAN_fb.png" alt="Clean version of the Facebook logo for testing">
+                <figcaption>Facebook (Clean)</figcaption>
+            </figure>
+            <figure class="logo">
+                <img src="./Control Group (Images)/CLEAN_insta.png" alt="Clean version of the Instagram logo for testing">
+                <figcaption>Instagram (Clean)</figcaption>
+            </figure>
+            <figure class="logo">
+                <img src="./Control Group (Images)/CLEAN_yt.png" alt="Clean version of the YouTube logo for testing">
+                <figcaption>YouTube (Clean)</figcaption>
+            </figure>
         </div>
-    </header>
 
-    <main>
-        <section class="content">
-            <h1>Welcome to Our Website Trust Test</h1>
-            <p>Please evaluate each logo shown below and let us know your thoughts on its trustworthiness.</p>
-        </section>
+        <!-- Perturbed Logos Section -->
+        <h2>Perturbed Logos</h2>
+        <div class="logo-section">
+            <figure class="logo">
+                <img src="./Noisy Logo (Images)/fb1.png" alt="Perturbed version of the Facebook logo for testing">
+                <figcaption>Facebook (Perturbed)</figcaption>
+            </figure>
+            <figure class="logo">
+                <img src="./Noisy Logo (Images)/insta1.png" alt="Perturbed version of the Instagram logo for testing">
+                <figcaption>Instagram (Perturbed)</figcaption>
+            </figure>
+            <figure class="logo">
+                <img src="./Noisy Logo (Images)/yt1.png" alt="Perturbed version of the YouTube logo for testing">
+                <figcaption>YouTube (Perturbed)</figcaption>
+            </figure>
+        </div>
 
-        <form id="logo-trust-survey-form" action="https://formspree.io/f/mnnqpwel" method="POST">
-            <div class="logo-grid">
-                <div class="logo-item">
-                    <img src="" alt="Logo 1">
-                    <label>Do you trust this logo?</label>
-                    <select name="trust_logo_1" class="trust-select">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-                <div class="logo-item">
-                    <img src="" alt="Logo 2">
-                    <label>Do you trust this logo?</label>
-                    <select name="trust_logo_2" class="trust-select">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-                <div class="logo-item">
-                    <img src="" alt="Logo 3">
-                    <label>Do you trust this logo?</label>
-                    <select name="trust_logo_3" class="trust-select">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-                <!-- Add more logos as needed -->
-            </div>
+        <!-- Survey Form -->
+        <form id="logo-trust-survey-form" action="https://formspree.io/f/mnnqpwel" method="post">
+            <h2>Survey Questions</h2>
 
-            <h2>Trust Survey Summary</h2>
-            <label for="overall-trust">Overall, do you trust this website?</label>
-            <select id="overall-trust" name="overall_trust">
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-            </select>
-            <br>
-            <label for="reason">If no, please explain why:</label>
-            <textarea id="reason" name="reason" rows="4"></textarea>
-            <br>
-            <label for="improvement">How could we improve the trustworthiness of our website?</label>
-            <textarea id="improvement" name="improvement" rows="4"></textarea>
-            <br>
-            <button type="submit">Submit</button>
+            <label for="logo-trust">Do you trust this logo as representing Facebook?</label><br>
+            <select id="logo-trust" name="logo-trust">
+                <option value="1">1 - Not at all</option>
+                <option value="2">2</option>
+                <option value="3">3 - Neutral</option>
+                <option value="4">4</option>
+                <option value="5">5 - Completely</option>
+            </select><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="13" required><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="nonbinary">Non-binary</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
+            </select><br>
+
+            <label for="familiarity">How familiar are you with the Facebook brand? (1-5)</label>
+            <select id="familiarity" name="familiarity">
+                <option value="1">1 - Not familiar at all</option>
+                <option value="2">2</option>
+                <option value="3">3 - Somewhat familiar</option>
+                <option value="4">4</option>
+                <option value="5">5 - Very familiar</option>
+            </select><br>
+
+            <label for="frequency">How often do you use Facebook?</label>
+            <select id="frequency" name="frequency">
+                <option value="daily">Daily</option>
+                <option value="weekly">Weekly</option>
+                <option value="monthly">Monthly</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select><br>
+
+            <label for="platform">Do you primarily use mobile or desktop to access social media?</label>
+            <select id="platform" name="platform">
+                <option value="mobile">Mobile</option>
+                <option value="desktop">Desktop</option>
+                <option value="both">Both</option>
+            </select><br>
+
+            <label for="other-platforms">Do you use Instagram, YouTube, or other platforms?</label><br>
+            <input type="checkbox" id="instagram" name="other-platforms" value="Instagram"> Instagram<br>
+            <input type="checkbox" id="youtube" name="other-platforms" value="YouTube"> YouTube<br>
+            <input type="checkbox" id="other" name="other-platforms" value="Other"> Other<br><br>
+
+            <input type="submit" value="Submit">
         </form>
-    </main>
-
-    <footer>
-        <p>&copy; University of Tennessee Computer Science Department, 2024 COSC 569 FR^2 Team. All rights reserved.</p>
-    </footer>
-
-    <script>
-    // JavaScript to handle the trust survey form submission and log responses
-    document.addEventListener("DOMContentLoaded", function() {
-        const form = document.getElementById("logo-trust-survey-form");
-
-        form.addEventListener("submit", function(event) {
-            // Log responses before form submission
-            const logoTrustElements = document.querySelectorAll('.trust-select');
-            logoTrustElements.forEach((element, index) => {
-                console.log(`Trust response for Logo ${index + 1}:`, element.value);
-            });
-
-            const overallTrustValue = document.getElementById("overall-trust").value;
-            const reasonValue = document.getElementById("reason").value;
-            const improvementValue = document.getElementById("improvement").value;
-
-            console.log("Overall Trust response: ", overallTrustValue);
-            if (overallTrustValue === "no") {
-                console.log("Reason for distrust: ", reasonValue);
-            }
-            console.log("Suggested improvements: ", improvementValue);
-
-            // The form will now be submitted to Formspree
-        });
-    });
-</script>
-
+    </div>
 </body>
 </html>
+
+
 
 
