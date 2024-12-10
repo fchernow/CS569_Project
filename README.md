@@ -4,6 +4,6 @@ This repository contains the files and code used for the research project titled
 
 # Folders  
 - **temp_code-** Old code (unused)
-- **images-** Old image code (unused)
+- **images-** Old image data (unused)
 - **Logo Images-** Contains all perturbed and control group logos
 - **Generating Noise-** Contain code used in generating noisy logos
